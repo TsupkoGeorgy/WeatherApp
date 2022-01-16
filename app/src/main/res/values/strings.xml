@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    
+
+    <string name="display_temperature_celsius">%d ℃</string>
+    <string name="display_wind_to_ms">%d m/s</string>
+    <string name="display_humidity">%d %%</string>
+    <string name="display_air_pressure">%d mm Hg</string>
+    <string name="display_feelslike_temperature">Feels like %d ℃</string>
+</resources>
