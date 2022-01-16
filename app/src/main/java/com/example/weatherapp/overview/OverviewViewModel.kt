@@ -9,11 +9,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.lang.Exception
-import java.security.cert.Extension
 
 class OverviewViewModel : ViewModel() {
 
@@ -65,7 +61,7 @@ class OverviewViewModel : ViewModel() {
 
     private fun getWeatherProperties() {
         coroutineScope.launch {
-            val getPropertiesDeferred = WeatherApi.retrofitService.getProperties()
+            val getPropertiesDeferred = WeatherApi.retrofitService.getCurrentPropertiesAsync("Novocherkassk")
             try {
                 val propertyResult = getPropertiesDeferred.await()
                 _properties.value = propertyResult
